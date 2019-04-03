@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle } from 'reactstrap';
 
 
-class DishDetail extends Component {
 
-    renderDish(dish) {
+
+   
+
+    function RenderDish({dish}) {
         return (
             <div className="col-12 col-md-5 m-1">
                 <Card>
@@ -19,8 +21,8 @@ class DishDetail extends Component {
         );
     }
 
-    renderComments (dish) {
-        const comments = this.props.dish.comments;
+    function RenderComments ({dish}) {
+        const comments = dish.comments;
 
         if (comments!= null) {
             return(
@@ -30,8 +32,8 @@ class DishDetail extends Component {
           {comments.map((comm) => {
             return (
               <li key={comm.id}> 
-                <p>{comm.comment}</p><p>{comm.author },  
-                {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comm.date)))}</p>          
+                <p>{comm.comment}</p><p>
+                {comm.author} ,  {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comm.date)))}</p>          
               </li>
             );
           })}
@@ -47,14 +49,16 @@ class DishDetail extends Component {
         }
     }
     
-    render () {
-        const dish = this.props.dish;
+    const DishDetail = (props) => {
+
+        console.log('Dishdetail component render invoked');
+        const dish = props.dish;
         if (dish!=null) {
             return(
-                <div class="container">
+                <div className="container">
                 <div className="row">
-                    {this.renderDish(dish)}
-                    {this.renderComments(dish)}
+                    <RenderDish dish ={props.dish} />
+                    <RenderComments dish = {props.dish} />
                 </div>
                 </div>
             );
@@ -66,7 +70,7 @@ class DishDetail extends Component {
         }
     }
 
-}
+
 
 export default DishDetail;
 
