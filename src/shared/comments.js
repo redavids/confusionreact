@@ -28,7 +28,7 @@ export const COMMENTS =
         id: 3,
         dishId: 0,
         rating: 4,
-        comment: "Ultimate, Reaching for the stars!",
+        comment: "Like shoe leather!",
         author: "Ringo Starry",
         date: "2013-12-02T17:57:28.556094Z"
     },
@@ -60,7 +60,7 @@ export const COMMENTS =
         id: 7,
         dishId: 1,
         rating: 3,
-        comment: "Eat it, just eat it!",
+        comment: "Nope!",
         author: "Michael Jaikishan",
         date: "2015-02-13T17:57:28.556094Z"
     },
@@ -84,7 +84,7 @@ export const COMMENTS =
         id: 10,
         dishId: 2,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
+        comment: "These are so gross!",
         author: "John Lemon",
         date: "2012-10-16T17:57:28.556094Z"
     },
@@ -124,7 +124,7 @@ export const COMMENTS =
         id: 15,
         dishId: 3,
         rating: 5,
-        comment: "Imagine all the eatables, living in conFusion!",
+        comment: "This cheescake tastes like soap!",
         author: "John Lemon",
         date: "2012-10-16T17:57:28.556094Z"
     },
