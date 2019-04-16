@@ -166,7 +166,7 @@ class Contact extends Component {
                                         className="form-control">
                                         <option>Tel.</option>
                                         <option>Email</option>
-                                        </Control.select>
+                                    </Control.select>
                                 </Col>
                             </Row>
                             <Row className="form-group">
