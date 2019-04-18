@@ -7,7 +7,7 @@ import { baseUrl } from '../shared/baseUrl';
 function RenderCard({item, isLoading, errMess}) {
     if (isLoading) {
         return(
-                <Loading />
+            <Loading />
         );
     }
     else if (errMess) {
@@ -40,7 +40,7 @@ function Home(props) {
                 <div className="col-12 col-md m-1">
                     <RenderCard item={props.promotion}
                     isLoading={props.promoLoading} 
-                    errMess={props.promosErrMess} /> 
+                    errMess={props.promoErrMess} /> 
                 </div>
                 <div className="col-12 col-md m-1">
                     <RenderCard item={props.leader} />
